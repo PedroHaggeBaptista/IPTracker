@@ -18,6 +18,8 @@ function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     
+    console.log(proccess.env.NEXT_PUBLIC_URL_SANDBOX)
+    
     const Login = () => {
         axios.post(`${process.env.NEXT_PUBLIC_URL_SANDBOX}/User/Login`, 
         {

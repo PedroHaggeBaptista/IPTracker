@@ -35,13 +35,15 @@ function Login() {
     }
 
     return(
-        <div className='w-full flex  lg:flex-row sm:flex-col justify-center h-screen items-center '>
-            <div className='lg:flex sm:mt-10 sm:w-60 w-2/4 flex-col items-center gap-32'>
+        <div className='sm:w-full flex  lg:flex-row sm:flex-col justify-center h-screen items-center '>
+
+            <div className='lg:flex sm:mt-10 sm:w-72 w-2/4 flex-col items-center lg:mr-80'>
                 <div>
                     <img src='/logoIPT.svg' className='w-96'></img>
                 </div>
             </div>
-            <div className='flex justify-center object-contain'>
+
+            <div className='flex justify-center object-contain lg:ml-20'>
                 <div className='flex flex-col items-center lg:bg-fundo-ipt gap-5 lg:w-4/6 rounded-xl overflow-hidden'>
                     <div className='flex justify-center mt-4'>
                         <h1 className='Montserrat font-bold text-3xl  text-white'>Bem-vindo(a)</h1> 
@@ -68,6 +70,7 @@ function Login() {
                     {/* <Button ctn={"Continuar"}/>   */}
                 </div>
             </div>
+
             <ToastContainer />
         </div>
         

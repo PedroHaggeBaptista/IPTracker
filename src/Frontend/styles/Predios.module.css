@@ -15,6 +15,7 @@
     font-size: 13pt;
     margin-left: 7rem;
     text-align:center;
+    margin-left: 0rem;
   }
 
   .inputSala {
@@ -53,8 +54,8 @@
     .div {
       width: 24rem ;
     }
-    .input {
+    /* .input {
       margin-left: 0rem;
-    }
+    } */
   }
   

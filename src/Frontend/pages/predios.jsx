@@ -51,13 +51,13 @@ function Predios() {
   }
 
   return (
-    <div className="text-center justify-center ">
-      <h1 className="Montserrat font-bold text-2xl text-black lg:pl-28">
+    <div className="text-center justify-center pb-24">
+      <h1 className="Montserrat font-bold text-2xl text-black">
         Prédios
       </h1>
       <div className="relative">
         <FontAwesomeIcon
-          className="absolute lg:pl-32 pt-7 h-7 sm:pl-5"
+          className="absolute pt-7 h-7 pl-2"
           icon={faMagnifyingGlass}
         ></FontAwesomeIcon>
         <input

@@ -45,7 +45,7 @@ function Notificacoes() {
     get();
   }, []);
   return (
-    <div className="justify-center grid-row lg:pl-32">
+    <div className="justify-center grid-row lg:pl-32 pb-24">
       <div className="text-center justify-center mt-6 mb-3">
         <h1 className="Montserrat font-bold text-2xl text-black">
           Painel de Notificações

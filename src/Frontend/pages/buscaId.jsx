@@ -40,16 +40,16 @@ function BuscaId({ data }) {
   };
 
   return (
-    <div className=" flex flex-col items-center">
+    <div className="flex flex-col items-center pb-24">
 
-      <h1 className="Montserrat font-bold text-2xl lg:ml-32">
+      <h1 className="Montserrat font-bold text-2xl md:ml-32">
         Buscar por equipamento
       </h1>
 
 
       <div className="relative">
         <FontAwesomeIcon
-          className="absolute lg:pl-32 pt-7 h-7 pl-5"
+          className="absolute pt-7 h-7 pl-5"
           icon={faMagnifyingGlass}
         ></FontAwesomeIcon>
         <input

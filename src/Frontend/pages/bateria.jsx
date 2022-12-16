@@ -46,16 +46,16 @@ function Bateria({ data }) {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center pb-24">
       {' '}
       {/*abertura da div principal que está centralizando o conteúdo*/}
       <div className="relative pt-8">
-        <h1 className="Montserrat font-bold text-2xl text-black lg:pl-28">
+        <h1 className="Montserrat font-bold text-2xl text-black">
           Status da Bateria
         </h1>
         <div className="">
           <FontAwesomeIcon
-            className="absolute lg:pl-32 pt-7 h-7 sm:pl-5 mr-5"
+            className="absolute pt-7 h-7 pl-2"
             icon={faMagnifyingGlass}
           ></FontAwesomeIcon>
           <input

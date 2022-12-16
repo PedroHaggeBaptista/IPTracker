@@ -61,53 +61,39 @@ function admin() {
     return (
         <div>
             <div>
-                <div className="absolute sm:relative w-full lg:w-5/6 lg:top-14 lg:left-56">
+                <div className="absolute w-full sm:w-5/6 pb-32 top-8 left-0 sm:top-12 sm:left-56">
                     <div className="flex flex-col w-full gap-6 justify-center items-center">
-
-
-                        <div className="w-5/6 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
-                            <h1 className="Montserrat">{data.name} / {data.patrimonioId}</h1>
-                        </div>
-
-
-                        <div className="w-5/6 gap-6 flex flex-col">
-
-
-
-                            <div className="w-full flex justify-center items-center h-80 bg-gray-200 rounded-3xl">
-                                <ESP32 />
+                        <div className="flex w-full justify-center items-center">
+                            <div className="w-5/6 flex justify-center items-center h-12 bg-gray-200 rounded-xl">
+                                <h1 className="Montserrat">{data.name} / {data.patrimonioId}</h1>
                             </div>
-
+                        </div>
+                        <div className="w-5/6 gap-6 flex flex-col md:flex-row">
                             <div className="flex w-full justify-center items-center">
-
+                                <div className="w-full flex justify-center items-center h-80 bg-gray-200 rounded-3xl">
+                                    <ESP32 />
+                                </div>
+                            </div>
+                            <div className="flex w-full justify-center items-center">
                                 <div className="w-full flex flex-row justify-center items-center h-44 sm:h-80 bg-gray-200 rounded-3xl">
-
                                     <div className="w-full flex justify-center border-r-4 border-ipt">
-
-
-                                        <div className="flex flex-col items-center gap-2">
-                                            <FontAwesomeIcon icon={faBuilding} size="lg" />
-                                            <FontAwesomeIcon icon={faDoorOpen} size="lg" />
+                                        <div className="flex flex-col gap-6 justify-center items-center">
+                                            <div className="flex flex-row items-center gap-2">
+                                                <FontAwesomeIcon icon={faBuilding} size="lg" />
+                                                <label className="Montserrat font-semibold">Prédio {data.predio}</label>
+                                            </div>
+                                            <div className="flex flex-row items-center gap-2">
+                                                <FontAwesomeIcon icon={faDoorOpen} size="lg" />
+                                                <label className="Montserrat font-semibold">Sala {data.sala}</label>
+                                            </div>
                                         </div>
-
-                                        <div className="flex flex-col items-center gap-2">
-                                            <label className="Montserrat font-semibold">Prédio: {data.predio}</label>
-                                            <label className="Montserrat font-semibold">Sala: {data.sala}</label>
-                                        </div>
-
                                     </div>
-
                                     <div className="w-full flex justify-center border-ipt">
                                         <img src="/batGood.svg" />
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
-
-
                         <div id="btnAccept" className="flex w-5/6 justify-center items-center">
                             <button className="w-full bg-green-btn hover:bg-green-600 h-12 rounded-xl font-bold Montserrat transition duration-300" onClick={() => { callBuzzer() }}>Chame o equipamento</button>
                         </div>
@@ -128,17 +114,17 @@ function admin() {
 
 export const getServerSideProps = async ctx => {
     let cookieToken = ctx.req.cookies['token'];
-
+  
     await axios.get(`${process.env.NEXT_PUBLIC_URL_SANDBOX}/User/Infos`, {
-        headers: { Authorization: `Bearer ${cookieToken}` }
-    }).then(response => { }).catch(error => {
-        ctx.res.writeHead(302, {
-            Location: '/'
-        });
-        ctx.res.end();
+      headers: { Authorization: `Bearer ${cookieToken}` }
+    }).then(response => {}).catch(error => {
+      ctx.res.writeHead(302, {
+        Location: '/'
+      });
+      ctx.res.end();
     });
-
+  
     return { props: {} };
-};
+  };
 
 export default admin

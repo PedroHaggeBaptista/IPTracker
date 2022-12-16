@@ -6,6 +6,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'sm': '373px',
+      // => @media (min-width: 640px) { ... }
+      
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+    },
     extend: {
       colors: {
         'ipt': '#3dc0e8',

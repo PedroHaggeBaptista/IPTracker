@@ -40,12 +40,12 @@ function BuscaId({ data }) {
   };
 
   return (
-    <div className="text-center">
-      <div className="flex justify-center text-center ml-28">
-        <h1 className="Montserrat font-bold text-2xl">
-          Buscar por equipamento
-        </h1>
-      </div>
+    <div className=" flex flex-col items-center">
+
+      <h1 className="Montserrat font-bold text-2xl lg:ml-32">
+        Buscar por equipamento
+      </h1>
+
 
       <div className="relative">
         <FontAwesomeIcon
@@ -69,12 +69,12 @@ export const getServerSideProps = async (ctx) => {
   let cookieToken = ctx.req.cookies['token'];
 
   await axios.get(`${process.env.NEXT_PUBLIC_URL_SANDBOX}/User/Infos`, {
-      headers: { Authorization: `Bearer ${cookieToken}` }
-  }).then(response => {}).catch(error => {
-      ctx.res.writeHead(302, {
+    headers: { Authorization: `Bearer ${cookieToken}` }
+  }).then(response => { }).catch(error => {
+    ctx.res.writeHead(302, {
       Location: '/'
-      });
-      ctx.res.end();
+    });
+    ctx.res.end();
   });
 
   let data;
@@ -82,7 +82,7 @@ export const getServerSideProps = async (ctx) => {
     data = response.data;
   });
 
-  return {props: {data}};
+  return { props: { data } };
 }
 
 export default BuscaId;

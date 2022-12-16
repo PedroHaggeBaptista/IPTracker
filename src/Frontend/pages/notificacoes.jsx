@@ -54,7 +54,7 @@ function Notificacoes() {
 
       <div className="grid lg:grid-cols-3 grid-cols-1 justify-center ">
         <div className="lg:pl-8 flex flex-col items-center ">
-          <div className="flex justify-center items-center border-solid border-2 border-black rounded-md h-10 w-64 m-2  cursor-pointer hover:p-6 hover:shadow-cyan-700 hover:shadow-lg">
+          <div className="flex justify-center items-center border-solid border-2 border-black rounded-md h-10 w-64 m-2  lg:mt-5">
             <h1>Conectividade</h1>
             <div className="px-4">
               <FontAwesomeIcon icon={faWifi} size="lg" />
@@ -63,7 +63,7 @@ function Notificacoes() {
           <Notificacao2 data={data}></Notificacao2>
         </div>
         <div className="lg:pl-8 flex flex-col items-center">
-          <div className="flex justify-center items-center border-solid border-2 border-black rounded-md h-10 w-64 m-2  cursor-pointer hover:p-6 hover:shadow-cyan-700 hover:shadow-lg">
+          <div className="flex justify-center items-center border-solid border-2 border-black rounded-md h-10 w-64 m-2 lg:mt-5  sm:mt-12">
             <h1>Saída do IPT</h1>
             <div className="px-4">
               <FontAwesomeIcon icon={faLocationDot} size="lg" />
@@ -74,7 +74,7 @@ function Notificacoes() {
           <Notificacao3 data={data}></Notificacao3>
         </div>
         <div className="lg:pl-8 flex flex-col items-center">
-          <div className="flex justify-center items-center border-solid border-2 border-black rounded-md h-10 w-64 m-2  cursor-pointer hover:p-6 hover:shadow-cyan-700 hover:shadow-lg">
+          <div className="flex justify-center items-center border-solid border-2 border-black rounded-md h-10 w-64 m-2 lg:mt-5 sm:mt-12">
             <h1>Bateria</h1>
             <div className="px-4">
               <FontAwesomeIcon icon={faBatteryQuarter} size="lg" />

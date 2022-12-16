@@ -39,8 +39,8 @@ function Notificacao({ data }) {
               href={`/admin/${element.patrimonioId}`}
               key={element.patrimonioId}
             >
-              <div className="text-sm flex p-4 justify-left items-center border-solid border-2 border-black rounded-2xl h-9 m-2 lg:w-96 cursor-pointer hover:p-6 hover:shadow-cyan-700 hover:shadow-lg">
-                <h1>{setText( element)}</h1>
+              <div className="text-sm flex p-4 justify-left items-center border-solid border-2 border-black rounded-2xl h-9 m-2 lg:w-96 cursor-pointer hover:p-6 hover:shadow-cyan-700 hover:shadow-lg ">
+                <h1 className=''>{setText( element)}</h1>
               </div>
             </Link>
           ))}

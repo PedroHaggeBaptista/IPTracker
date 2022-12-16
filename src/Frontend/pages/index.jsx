@@ -35,9 +35,9 @@ function Login() {
     }
 
     return(
-        <div className='sm:w-full flex  lg:flex-row sm:flex-col justify-center h-screen items-center '>
+        <div className='sm:w-full flex flex-col md:flex-row sm:flex-col justify-center h-screen items-center '>
 
-            <div className='lg:flex sm:mt-10 sm:w-72 w-2/4 flex-col items-center lg:mr-80'>
+            <div className='md:flex sm:mt-10 sm:w-72 w-2/4 flex-col items-center md:ml-12 lg:mr-80'>
                 <div>
                     <img src='/logoIPT.svg' className='w-96'></img>
                 </div>
